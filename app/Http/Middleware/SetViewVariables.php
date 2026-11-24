@@ -20,7 +20,7 @@ class SetViewVariables
      */
     public function handle($request, Closure $next)
     {
-        if (Utils::installed()) {
+       if (Utils::isAttendize() || Utils::installed()) {
             /*
              * Share the organizers across all views
              */
